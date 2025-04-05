@@ -1,0 +1,37 @@
+
+  import { SequenceConnect, createConfig } from '@0xsequence/connect'
+
+  export function App() {
+    const projectAccessKey = "AQAAAAAAAJwcbgZCc0kLSmyzEzezyQ0PkVU"
+    const waasConfigKey = "eyJwcm9qZWN0SWQiOjM5OTY0LCJycGNTZXJ2ZXIiOiJodHRwczovL3dhYXMuc2VxdWVuY2UuYXBwIn0=" // Pass in your waasConfigKey
+    const enableConfirmationModal = true // change to your preference
+    
+    const config = createConfig('waas', {
+      projectAccessKey,
+      position: "center",
+      defaultTheme: "dark",
+      signIn: {
+        projectName: "$Chonk9k",
+	logoUrl: "https://storage.googleapis.com/sequence-prod-cluster-builder/projects/39964/wallet/signInlogoUrl_04bd4beffbe4692607bb56fb6b46aadf189e6b246e4c4dc0ea53070bb23626ed.png",
+      },
+      defaultChainId: 80002,
+      chainIds: [421614,11155111,43113,11155420,84532,80002,168587773],
+      appName: "$Chonk9k",
+      waasConfigKey,
+      google: false,
+      apple: false,
+      walletConnect: false,
+      coinbase: false,
+      metaMask: true,
+      wagmiConfig: {
+        multiInjectedProviderDiscovery: false,
+      },
+      enableConfirmationModal,
+    })
+
+    return (
+      <SequenceConnect config={config}>
+        <MyPage />
+      </SequenceConnect>
+    );
+}
