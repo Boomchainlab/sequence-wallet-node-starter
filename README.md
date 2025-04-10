@@ -114,3 +114,4 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 ⸻
 
 Embrace the future of decentralized authentication with Sequence Wallet. Your journey to creating a next-gen Web3 app starts here. 🚀
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.com/template/6oegFP?referralCode=mvS2sd)
